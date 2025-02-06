@@ -94,9 +94,9 @@ function updateUI() {
   const remaining = income - expense;
 
   // Update summary
-  totalIncome.textContent = `$${income.toFixed(2)}`;
-  totalExpense.textContent = `$${expense.toFixed(2)}`;
-  remainingBudget.textContent = `$${remaining.toFixed(2)}`;
+  totalIncome.textContent = `KD ${income.toFixed(3)}`;
+  totalExpense.textContent = `KD ${expense.toFixed(3)}`;
+  remainingBudget.textContent = `KD ${remaining.toFixed(3)}`;
 
   // Update chart
   budgetChart.data.datasets[0].data = [income, expense];
@@ -109,7 +109,7 @@ function updateUI() {
         <td>${t.date}</td>
         <td>${t.category}</td>
         <td class="${t.type}">${t.type}</td>
-        <td class="${t.type}">${t.type === 'income' ? '+' : '-'}$${t.amount.toFixed(2)}</td>
+        <td class="${t.type}">${t.type === 'income' ? '+' : '-'}KD ${t.amount.toFixed(3)}</td>
         <td>${t.location || '-'}</td>
         <td>${t.remarks || '-'}</td>
         <td class="actions">
